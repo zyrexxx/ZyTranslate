@@ -22,8 +22,7 @@ def translate(lang, text):
         json_data = response.json()
         translation = json_data[0][0][0]
 
-        print(translation.encode('utf-8').decode('utf-8'))
-        return translation
+        return translation.encode('utf-8').decode('utf-8')
 
     print('[ ! ZyTranslate ! ] ошибка. неверный язык.')
 
@@ -35,16 +34,10 @@ def randomTranslate(text):
     json_data = response.json()
     translation = json_data[0][0][0]
 
-    print(translation.encode('utf-8').decode('utf-8'))
-    return translation
+    return translation.encode('utf-8').decode('utf-8')
 
 def detectLang(text):
 
     lang = detect(text)
     
-    print(lang)
-    return lang
-
-translate('en', 'пися')
-randomTranslate('dick')
-detectLang('хуй')
+    return lang.encode('utf-8').decode('utf-8')
